@@ -2,35 +2,35 @@
 pub fn site_config() -> SiteConfig {
   SiteConfig::{
     name: "朱信童",
+    site_title: "朱信童 - 个人主页",
     tagline: "Developer · Open Source Enthusiast · Lifelong Learner",
     avatar: "",
     projects: [
       Project::{
-        title: "project-alpha",
-        description: "A cool project built with MoonBit and Vue",
-        url: "https://github.com/lenitain/personal_homepage",
-        tags: ["MoonBit", "Vue", "TypeScript"],
+        title: "dotfiles",
+        description: "Configuration files optimized for CachyOS + Niri environment",
+        url: "https://github.com/lenitain/dotfiles",
+        tags: ["configuration", "Lua", "shell"],
       },
       Project::{
-        title: "project-beta",
-        description: "Another awesome project",
-        url: "https://github.com/you/project-beta",
-        tags: ["Rust", "WebAssembly"],
+        title: "fsmon",
+        description: "A cli tool that records filesystem changes and which process executed them",
+        url: "https://github.com/lenitain/fsmon",
+        tags: ["Rust", "Linux syscall", "filesystem", "cli"],
       },
       Project::{
-        title: "project-gamma",
-        description: "Yet another project worth mentioning",
-        url: "https://github.com/you/project-gamma",
-        tags: ["Python", "ML"],
+        title: "gaze_vibe",
+        description: "Eye track assisted code generating tool",
+        url: "https://github.com/lenitain/gaze_vibe",
+        tags: ["Python", "LLM", "Vue"],
       },
     ],
     skills: [
       Skill::{ name: "MoonBit", category: "Languages", level: 3 },
-      Skill::{ name: "Vue", category: "Frameworks", level: 4 },
+      Skill::{ name: "Vue", category: "Frameworks", level: 3 },
       Skill::{ name: "Rust", category: "Languages", level: 4 },
-      Skill::{ name: "TypeScript", category: "Languages", level: 4 },
-      Skill::{ name: "Python", category: "Languages", level: 3 },
-      Skill::{ name: "Tailwind CSS", category: "Frameworks", level: 3 },
+      Skill::{ name: "JavaScript", category: "Languages", level: 3 },
+      Skill::{ name: "Python", category: "Languages", level: 4 },
     ],
     socials: [
       SocialLink::{

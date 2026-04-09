@@ -25,6 +25,7 @@ pub struct BlogPost {
 
 pub struct SiteConfig {
   name : String
+  site_title : String
   tagline : String
   avatar : String
   projects : Array[Project]

@@ -23,7 +23,7 @@ function onSearch(query: string) {
 <template>
   <div class="min-h-screen bg-slate-300/10">
     <NavBar @search="onSearch">
-      <template #site-name>{{ config.name }}</template>
+      <template #site-name>{{ config.site_title }}</template>
     </NavBar>
 
     <main class="max-w-5xl mx-auto px-4">

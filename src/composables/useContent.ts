@@ -28,6 +28,7 @@ export interface BlogPost {
 
 export interface SiteConfig {
   name: string
+  site_title: string
   tagline: string
   avatar: string
   projects: Project[]

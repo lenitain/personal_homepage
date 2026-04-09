@@ -34,5 +34,5 @@ pub fn config_to_json(config : SiteConfig) -> String {
   let skills_json = config.skills.map(json_skill).join(", ")
   let socials_json = config.socials.map(json_social).join(", ")
   let posts_json = config.posts.map(json_post).join(", ")
-  "{\"name\":\{json_string(config.name)},\"tagline\":\{json_string(config.tagline)},\"avatar\":\{json_string(config.avatar)},\"projects\":[\{projects_json}],\"skills\":[\{skills_json}],\"socials\":[\{socials_json}],\"posts\":[\{posts_json}]}"
+  "{\"name\":\{json_string(config.name)},\"site_title\":\{json_string(config.site_title)},\"tagline\":\{json_string(config.tagline)},\"avatar\":\{json_string(config.avatar)},\"projects\":[\{projects_json}],\"skills\":[\{skills_json}],\"socials\":[\{socials_json}],\"posts\":[\{posts_json}]}"
 }
