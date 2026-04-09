@@ -14,12 +14,31 @@ raw = raw.replace(/\n\(\(\) => \{[\s\S]*?\}\)\(\);\n?/, '\n');
 // Remove source map reference
 raw = raw.replace(/\/\/# sourceMappingURL=.*\n?/, '');
 
+// Resolve mangled MoonBit symbol names dynamically
+function resolveMangledName(moonbitName) {
+  // MoonBit mangling: _M0FP<mangled-package><length><function_name>
+  // Single underscores in MoonBit names become double underscores in JS
+  const mangled = moonbitName.replace(/-/g, '_').replace(/_/g, '__');
+  const pattern = new RegExp(`(_M0FP\\d+lenitain7moonbit\\d+${mangled})\\b`);
+  const match = raw.match(pattern);
+  if (!match) {
+    console.warn(`Warning: could not find compiled symbol for ${moonbitName}`);
+    return `_MISSING_${moonbitName}`;
+  }
+  return match[1];
+}
+
+const siteConfig = resolveMangledName('site_config');
+const configToJson = resolveMangledName('config_to_json');
+const searchProjects = resolveMangledName('search_projects');
+const skillsByCategory = resolveMangledName('skills_by_category');
+
 // Add ES module exports
 const exportBlock = `
-export const siteConfig = _M0FP28lenitain7moonbit12site__config;
-export const configToJson = _M0FP28lenitain7moonbit16config__to__json;
-export const searchProjects = _M0FP28lenitain7moonbit12search__projects;
-export const skillsByCategory = _M0FP28lenitain7moonbit15skills__by__category;
+export const siteConfig = ${siteConfig};
+export const configToJson = ${configToJson};
+export const searchProjects = ${searchProjects};
+export const skillsByCategory = ${skillsByCategory};
 `;
 
 const output = `// Auto-generated from MoonBit - do not edit manually\n${raw}\n${exportBlock}\n`;

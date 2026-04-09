@@ -1,8 +1,8 @@
 ///|
 pub fn site_config() -> SiteConfig {
   SiteConfig::{
-    name: "Your Name",
-    tagline: "Developer · Open Source Enthusiast · Lifelong Learner",
+    name: "朱信童",
+    tagline: "Do one thing but do well.",
     avatar: "",
     projects: [
       Project::{
