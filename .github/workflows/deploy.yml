@@ -21,7 +21,7 @@ jobs:
 
       - uses: oven-sh/setup-bun@v2
 
-      - uses: moonbit-setup/moonbit-setup-action@v1
+      - uses: hustcer/setup-moonbit@v1
 
       - run: bun install
 
