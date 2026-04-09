@@ -2,7 +2,7 @@
 pub fn site_config() -> SiteConfig {
   SiteConfig::{
     name: "朱信童",
-    tagline: "Do one thing but do well.",
+    tagline: "Developer · Open Source Enthusiast · Lifelong Learner",
     avatar: "",
     projects: [
       Project::{
@@ -35,12 +35,12 @@ pub fn site_config() -> SiteConfig {
     socials: [
       SocialLink::{
         platform: "GitHub",
-        url: "https://github.com/you",
+        url: "https://github.com/lenitain",
         icon: "github",
       },
       SocialLink::{
         platform: "Email",
-        url: "mailto:you@example.com",
+        url: "mailto:xt.zhu@qq.com",
         icon: "mail",
       },
     ],
