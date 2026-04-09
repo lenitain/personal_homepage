@@ -27,7 +27,7 @@ function iconEmoji(icon: string): string {
         :href="social.url"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 text-slate-600 hover:text-sky-600 transition-colors"
+        class="flex items-center gap-2 text-sky-600 hover:text-sky-700 transition-colors"
       >
         <span>{{ iconEmoji(social.icon) }}</span>
         <span class="text-sm font-medium">{{ social.platform }}</span>

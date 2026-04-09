@@ -11,9 +11,9 @@ defineProps<{
     <h2 class="text-2xl font-bold text-slate-800 mb-6">博客 / 文章</h2>
     <ul class="space-y-3">
       <li v-for="post in posts" :key="post.title" class="flex items-baseline gap-4">
-        <a
+          <a
           :href="post.url"
-          class="text-slate-700 hover:text-sky-600 transition-colors font-medium"
+          class="text-sky-600 underline decoration-sky-600/40 underline-offset-2 hover:decoration-sky-600 font-medium"
         >
           {{ post.title }}
         </a>

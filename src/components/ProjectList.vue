@@ -18,7 +18,7 @@ defineProps<{
           class="group block p-4 rounded-lg hover:bg-slate-100/50 transition-colors"
         >
           <div class="flex items-baseline gap-3 mb-1">
-            <span class="font-semibold text-slate-800 group-hover:text-sky-600 transition-colors">
+            <span class="font-semibold text-sky-600 underline decoration-sky-600/30 underline-offset-2 group-hover:decoration-sky-600 transition-colors">
               {{ project.title }}
             </span>
             <span class="text-slate-300">&rarr;</span>
