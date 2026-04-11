@@ -14,7 +14,7 @@ pub fn site_config() -> SiteConfig {
       },
       Project::{
         title: "fsmon",
-        description: "A cli tool that records filesystem changes and which process executed them",
+        description: "A cli tool that records file changes",
         url: "https://github.com/lenitain/fsmon",
         tags: ["Rust", "Linux syscall", "filesystem", "cli"],
       },
