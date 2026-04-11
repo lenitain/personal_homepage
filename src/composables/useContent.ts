@@ -1,3 +1,4 @@
+import { ref, computed } from 'vue'
 // @ts-ignore - MoonBit compiled module
 import { siteConfig, searchProjects } from '../moonbit/index'
 
@@ -41,6 +42,8 @@ export interface SiteConfig {
 
 export function useContent() {
   const config: SiteConfig = siteConfig()
+  const searchQuery = ref('')
+  const filteredProjects = computed(() => searchProjects(config.projects, searchQuery.value))
 
   function search(query: string): Project[] {
     return searchProjects(config.projects, query)
@@ -58,6 +61,8 @@ export function useContent() {
 
   return {
     config,
+    searchQuery,
+    filteredProjects,
     search,
     getSkillsByCategory,
   }

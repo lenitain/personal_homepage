@@ -17,9 +17,9 @@ function onInput(e: Event) {
   <div class="sticky top-0 z-40 w-full backdrop-blur-xl flex-none border-b border-slate-900/10 bg-white/75">
     <div class="max-w-5xl mx-auto">
       <div class="py-4 px-4 lg:px-0 flex items-center justify-between">
-        <a href="/" class="text-lg font-bold text-slate-800 hover:text-slate-600">
+        <router-link to="/" class="text-lg font-bold text-slate-800 hover:text-slate-600">
           <slot name="site-name">My Wiki</slot>
-        </a>
+        </router-link>
         <div class="flex items-center gap-4">
           <input
             type="text"
