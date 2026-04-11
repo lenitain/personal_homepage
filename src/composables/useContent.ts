@@ -24,6 +24,8 @@ export interface BlogPost {
   title: string
   url: string
   date: string
+  tags: string[]
+  body: string
 }
 
 export interface SiteConfig {

@@ -21,6 +21,8 @@ pub struct BlogPost {
   title : String
   url : String
   date : String
+  tags : Array[String]
+  body : String
 }
 
 pub struct SiteConfig {

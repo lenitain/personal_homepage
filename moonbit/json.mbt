@@ -26,7 +26,8 @@ fn json_social(s : SocialLink) -> String {
 }
 
 fn json_post(p : BlogPost) -> String {
-  "{\"title\":\{json_string(p.title)},\"url\":\{json_string(p.url)},\"date\":\{json_string(p.date)}}"
+  let tags = json_array_str(p.tags)
+  "{\"title\":\{json_string(p.title)},\"url\":\{json_string(p.url)},\"date\":\{json_string(p.date)},\"tags\":\{tags},\"body\":\{json_string(p.body)}}"
 }
 
 pub fn config_to_json(config : SiteConfig) -> String {

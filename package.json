@@ -5,12 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build:posts": "node build-posts.js",
     "build:moonbit": "cd moonbit && moon build --target js && cd .. && bun run build-moonbit.js",
     "build": "vue-tsc -b && vite build",
-    "build:all": "bun run build:moonbit && bun run build",
+    "build:all": "bun run build:posts && bun run build:moonbit && bun run build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "marked": "^18.0.0",
     "vue": "^3.5.32"
   },
   "devDependencies": {

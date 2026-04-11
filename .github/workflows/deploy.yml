@@ -25,6 +25,8 @@ jobs:
 
       - run: bun install
 
+      - run: bun run build:posts
+
       - run: bun run build:moonbit
 
       - run: bun run build

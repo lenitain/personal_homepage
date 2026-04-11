@@ -44,17 +44,6 @@ pub fn site_config() -> SiteConfig {
         icon: "mail",
       },
     ],
-    posts: [
-      BlogPost::{
-        title: "Getting Started with MoonBit",
-        url: "#",
-        date: "2026-04-01",
-      },
-      BlogPost::{
-        title: "Building a Personal Site with Vue + MoonBit",
-        url: "#",
-        date: "2026-03-15",
-      },
-    ],
+    posts: posts_data(),
   }
 }
