@@ -25,11 +25,7 @@ jobs:
 
       - run: bun install
 
-      - run: bun run build:posts
-
-      - run: bun run build:moonbit
-
-      - run: bun run build
+      - run: bun run build:all
 
       - uses: actions/upload-pages-artifact@v3
         with:
